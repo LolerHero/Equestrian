@@ -19,11 +19,16 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from personal.views import (
-    home_screen_view
+    home_screen_view,
+)
+
+from account.views import (
+    register_view,
 )
 
 urlpatterns = [
     path('', home_screen_view, name='home'),
+    path('register/', register_view, name='register'),
     path('admin/', admin.site.urls),
 ]
 
