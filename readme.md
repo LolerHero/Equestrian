@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python3.6 or later
+- Python (3.6 or later works best)
 
 ## Installation
 
