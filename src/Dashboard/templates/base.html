@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'Dashboard/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="logo">
+            <a href="#" class="nav-link">
+                <span class="logo-text">Equestrians</span>
+                <i class='bx bxl-flutter'></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="blog.html" class="nav-link">
+                <i class='bx bxl-blogger'></i>
+                <span class="link-text">Blog</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class='bx bxs-grid'></i>
+                <span class="link-text">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class='bx bx-chat'></i>
+                <span class="link-text">Chats</span>
+            </a>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class='bx bx-calendar'></i>
+                <span class="link-text">Calendar</span>
+            </a>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class='bx bx-cart'></i>
+                <span class="link-text">Lessons</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class='bx bx-user'></i>
+                <span class="link-text">User</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</html>
