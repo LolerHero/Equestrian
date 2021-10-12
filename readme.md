@@ -1,5 +1,9 @@
 # Euqestrian
 
+## Requirements
+
+- Python3.6 or later
+
 ## Installation
 
 - Clone Repo
