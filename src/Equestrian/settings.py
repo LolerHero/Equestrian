@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,11 +28,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "account.Account"
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'account.backends.CaseInsensitiveModelBackend',
+)
+
 
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'Dashboard.apps.DashboardConfig',
+=======
+    # My Apps
+    'personal',
+    'account',
+
+    # Third Party
+>>>>>>> ac0158286850c6fce9e2514e0e816d2cc6819814
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +70,11 @@ ROOT_URLCONF = 'Equestrian.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'templates'],
+=======
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+>>>>>>> ac0158286850c6fce9e2514e0e816d2cc6819814
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +137,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media'),
+]
+
 STATIC_URL = '/static/'
+MEDIA_ULR = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
+TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
+
+BASE_DIR = "http:127.0.0.1:8000"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
