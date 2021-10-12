@@ -38,15 +38,7 @@ AUTHENTICATION_BACKENDS = (
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
     'Dashboard.apps.DashboardConfig',
-=======
-    # My Apps
-    'personal',
-    'account',
-
-    # Third Party
->>>>>>> ac0158286850c6fce9e2514e0e816d2cc6819814
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,11 +62,7 @@ ROOT_URLCONF = 'Equestrian.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [BASE_DIR / 'templates'],
-=======
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
->>>>>>> ac0158286850c6fce9e2514e0e816d2cc6819814
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
