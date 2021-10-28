@@ -84,6 +84,10 @@ main {
   color: var(--text-secondary);
 }
 
+.active i {
+  color: #b32020;
+}
+
 .logo {
   display: flex;
   font-weight: bold;
