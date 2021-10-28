@@ -147,6 +147,7 @@ main {
   .navbar-nav {
     flex-direction: row;
   }
+
   /* The devider depends on the number of items inside of the navbar excluding the Logo */
   .nav-item {
     width: calc(100vw / 6);
@@ -158,6 +159,20 @@ main {
 
   main {
     margin: 0;
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-item:last-child {
+    margin-top: 0;
+  }
+  /* The devider depends on the number of items inside of the navbar excluding the Logo */
+  .nav-item {
+    height: calc(100vh / 6);
   }
 }
 
