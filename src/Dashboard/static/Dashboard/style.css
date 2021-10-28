@@ -147,6 +147,10 @@ main {
   .navbar-nav {
     flex-direction: row;
   }
+  /* The devider depends on the number of items inside of the navbar excluding the Logo */
+  .nav-item {
+    width: calc(100vw / 6);
+  }
 
   .nav-link {
     justify-content: center;
